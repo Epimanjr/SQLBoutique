@@ -5,17 +5,7 @@ PRAGMA foreign_keys = ON;
 
 -- Question 1
 
-create table Personne(
-	idP NUMBER(4),
-	nom VARCHAR2(30),
-	prenom VARCHAR2(30),
-	mail VARCHAR2(50),
-	login VARCHAR2(30),
-	motDePasse VARCHAR2(30),
-	primary key(idP)
-);
-
-create table Boutique(
+CREATE TABLE Boutique(
 	idB NUMBER(4),
 	nomBoutique VARCHAR2(30),
 	mail VARCHAR2(50),
@@ -24,5 +14,45 @@ create table Boutique(
 	ville VARCHAR2(30),
 	CP NUMBER(5)
 	idGerant NUMBER(4),
-	foreign_keys(idGerant) references Personne(idP)
+        PRIMARY KEY(idB),
+	FOREIGN KEY(idGerant) REFERENCES Personne(idP)
+);
+
+CREATE TABLE Personne(
+	idP NUMBER(4),
+	nom VARCHAR2(30),
+	prenom VARCHAR2(30),
+	mail VARCHAR2(50),
+	login VARCHAR2(30),
+	motDePasse VARCHAR2(30),
+	PRIMARY KEY(idP)
+);
+
+CREATE TABLE Marque(
+        idM NUMBER(4),
+        nomMarque VARCHAR(30),
+        PRIMARY KEY(idM)
+);
+
+CREATE TABLE Produit(
+        idProd NUMBER(4),
+        libelle VARCHAR2(30),
+        idMarque VARCHAR2(30),
+        description VARCHAR2(30),
+        PRIMARY KEY(idProd),
+        FOREIGN KEY(idMarque) REFERENCES Marque(idM)
+);
+
+CREATE TABLE PrixProduit(
+        idProduit NUMBER(4),
+        idBoutique NUMBER(4),
+        PRIMARY KEY(idProduit, idBoutique),
+        FOREIGN KEY(idProduit) REFERENCES Produit(idP),
+        FOREIGN KEY(idBoutique) REFERENCES Boutique(idB)
+);
+
+CREATE TABLE Promotion(
+        idBoutique NUMBER(4),
+        reduction INT,
+        PRIMARY KEY(idBoutique)
 );
