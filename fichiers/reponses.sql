@@ -23,4 +23,6 @@ create table Boutique(
 	rue VARCHAR2(50),
 	ville VARCHAR2(30),
 	CP NUMBER(5)
+	idGerant NUMBER(4),
+	foreign_keys(idGerant) references Personne(idP)
 );
