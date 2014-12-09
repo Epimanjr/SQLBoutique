@@ -22,4 +22,13 @@ AND prenom='Francois';
 
 -- Question 5
 
+SELECT count(idProd)
+FROM Produit;
 
+-- Question 6
+
+SELECT libelle, nomMarque
+FROM Produit INNER JOIN nomMarque
+ON Produit.idMarque = Marque.idM
+
+-- Question 7

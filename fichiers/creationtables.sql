@@ -35,6 +35,7 @@ CREATE TABLE Produit(
 CREATE TABLE PrixProduit(
         idProduit NUMBER(4),
         idBoutique NUMBER(4),
+        prix NUMBER(5,2),
         FOREIGN KEY(idProduit) REFERENCES Produit(idP),
         FOREIGN KEY(idBoutique) REFERENCES Boutique(idB)
 );
