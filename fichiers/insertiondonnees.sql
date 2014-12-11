@@ -18,3 +18,5 @@ INSERT INTO Produit(libelle, idMarque, description) VALUES("", 2, "");
 INSERT INTO Produit(libelle, idMarque, description) VALUES("", 2, "");
 INSERT INTO Produit(libelle, idMarque, description) VALUES("", 3, "");
 INSERT INTO Produit(libelle, idMarque, description) VALUES("", 3, "");
+-- Insertion d'un produit dont l'idMarque est null, pour la question 7
+INSERT INTO Produit(libelle, idMarque, description) VALUES("", null, "");
