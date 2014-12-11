@@ -35,7 +35,7 @@ ON Produit.idMarque = Marque.idM
 
 ..
 
--- Question 8
+-- Question 8 --> à débugger
 
 SELECT libelle, nomMarque
 FROM ((Produit INNER JOIN Marque t1 ON Produit.idMarque = Marque.idM) 
@@ -46,6 +46,13 @@ WHERE nomBoutique = "totoBoutique";
 -- Question 9
 
 SELECT nom, prenom 
+FROM Personne 
+WHERE idP IN (SELECT idGerant FROM Boutique);
+
+-- Question 10
+
+CREATE VIEW listeGerants AS 
+SELECT idP, nom, prenom 
 FROM Personne 
 WHERE idP IN (SELECT idGerant FROM Boutique);
 
