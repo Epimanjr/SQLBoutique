@@ -28,7 +28,24 @@ FROM Produit;
 -- Question 6
 
 SELECT libelle, nomMarque
-FROM Produit INNER JOIN nomMarque
+FROM Produit INNER JOIN Marque
 ON Produit.idMarque = Marque.idM
 
 -- Question 7
+
+..
+
+-- Question 8
+
+SELECT libelle, nomMarque
+FROM ((Produit INNER JOIN Marque t1 ON Produit.idMarque = Marque.idM) 
+        INNER JOIN PrixProduit t2 ON t1.idP = PrixBoutique.idProduit)
+        INNER JOIN Boutique ON t2.idBoutique = Boutique.idB
+WHERE nomBoutique = "totoBoutique";
+
+-- Question 9
+
+SELECT nom, prenom 
+FROM Personne 
+WHERE idP IN (SELECT idGerant FROM Boutique);
+
