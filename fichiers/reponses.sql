@@ -62,3 +62,10 @@ SELECT nom, prenom, Count(idB)
 FROM listeGerants 
 INNER JOIN Boutique ON listeGerants.idP = Boutique.idGerant 
 GROUP BY nom, prenom;
+
+-- Question 12
+SELECT nom, prenom, Count(idB) 
+FROM listeGerants 
+INNER JOIN Boutique ON listeGerants.idP = Boutique.idGerant 
+GROUP BY nom, prenom 
+HAVING Count(idB) > 1 AND Count(idB) < 4;
