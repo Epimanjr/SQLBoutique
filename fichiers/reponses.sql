@@ -56,3 +56,9 @@ SELECT idP, nom, prenom
 FROM Personne 
 WHERE idP IN (SELECT idGerant FROM Boutique);
 
+-- Question 11
+
+SELECT nom, prenom, Count(idB) 
+FROM listeGerants 
+INNER JOIN Boutique ON listeGerants.idP = Boutique.idGerant 
+GROUP BY nom, prenom;
