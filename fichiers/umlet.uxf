@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>468</y>
+      <x>630</x>
+      <y>639</y>
       <w>189</w>
       <h>81</h>
     </coordinates>
@@ -20,8 +20,8 @@ description</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>171</y>
+      <x>630</x>
+      <y>342</y>
       <w>189</w>
       <h>144</h>
     </coordinates>
@@ -40,8 +40,8 @@ CP
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>207</y>
+      <x>234</x>
+      <y>378</y>
       <w>189</w>
       <h>99</h>
     </coordinates>
@@ -57,8 +57,8 @@ motDePasse</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>180</x>
-      <y>243</y>
+      <x>414</x>
+      <y>414</y>
       <w>234</w>
       <h>45</h>
     </coordinates>
@@ -71,8 +71,8 @@ gère &gt;</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>468</x>
-      <y>306</y>
+      <x>702</x>
+      <y>477</y>
       <w>90</w>
       <h>180</h>
     </coordinates>
@@ -86,8 +86,8 @@ prix</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>396</x>
-      <y>9</y>
+      <x>630</x>
+      <y>180</y>
       <w>189</w>
       <h>54</h>
     </coordinates>
@@ -100,8 +100,8 @@ promotion</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>486</x>
-      <y>54</y>
+      <x>720</x>
+      <y>225</y>
       <w>54</w>
       <h>135</h>
     </coordinates>
@@ -114,8 +114,8 @@ créer</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>729</x>
-      <y>468</y>
+      <x>963</x>
+      <y>639</y>
       <w>162</w>
       <h>72</h>
     </coordinates>
@@ -128,8 +128,8 @@ nomMarque</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>495</y>
+      <x>810</x>
+      <y>666</y>
       <w>171</w>
       <h>45</h>
     </coordinates>
