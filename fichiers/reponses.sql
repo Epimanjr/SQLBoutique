@@ -69,3 +69,19 @@ FROM listeGerants
 INNER JOIN Boutique ON listeGerants.idP = Boutique.idGerant 
 GROUP BY nom, prenom 
 HAVING Count(idB) > 1 AND Count(idB) < 4;
+
+-- Question 13
+;
+
+-- Question 14
+SELECT idP,nom,prenom 
+FROM Personne 
+EXCEPT 
+SELECT idP,nom,prenom 
+FROM listeGerants;
+
+SELECT idP,nom,prenom 
+FROM Personne 
+WHERE idP NOT IN (SELECT idP 
+                    FROM listeGerants);
+

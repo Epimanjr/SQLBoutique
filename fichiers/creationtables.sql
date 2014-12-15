@@ -45,3 +45,8 @@ CREATE TABLE Promotion(
         reduction INT,
         PRIMARY KEY(idBoutique)
 );
+
+CREATE VIEW listeGerants AS 
+SELECT idP, nom, prenom 
+FROM Personne 
+WHERE idP IN (SELECT idGerant FROM Boutique);
