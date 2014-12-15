@@ -71,7 +71,10 @@ GROUP BY nom, prenom
 HAVING Count(idB) > 1 AND Count(idB) < 4;
 
 -- Question 13
-;
+SELECT nomBoutique, prix, promotion
+FROM Produit NATURAL INNER JOIN PrixProduit NATURAL INNER JOIN Boutique NATURAL INNER JOIN Promotion
+WHERE libelle = "fourchette"
+GROUP BY nomBoutique;
 
 -- Question 14
 SELECT idP,nom,prenom 
