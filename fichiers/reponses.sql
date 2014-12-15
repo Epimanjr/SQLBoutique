@@ -85,3 +85,10 @@ FROM Personne
 WHERE idP NOT IN (SELECT idP 
                     FROM listeGerants);
 
+-- Question 15
+SELECT mail 
+FROM Boutique 
+UNION 
+SELECT mail 
+FROM Personne;
+
