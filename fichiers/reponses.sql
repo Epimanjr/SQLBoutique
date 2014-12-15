@@ -83,15 +83,21 @@ EXCEPT
 SELECT idP,nom,prenom 
 FROM listeGerants;
 
+-- Question 15
 SELECT idP,nom,prenom 
 FROM Personne 
 WHERE idP NOT IN (SELECT idP 
                     FROM listeGerants);
 
--- Question 15
+-- Question 16
 SELECT mail 
 FROM Boutique 
 UNION 
 SELECT mail 
 FROM Personne;
 
+-- Question 17
+SELECT * 
+FROM Boutique INNER JOIN Promotion ON Boutique.idB = Promotion.idBoutique 
+GROUP BY idB 
+HAVING reduction = MAX(reduction);
