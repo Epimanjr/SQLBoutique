@@ -106,6 +106,7 @@ HAVING reduction = MAX(reduction);
 -- Afficher les boutiques vendant au moins 
 -- un des articles vendus dans l'une des
 -- boutiques du gérant : John Smith
+-- Etape 1 : Sélectionner tous les idProduits de la boutique de John Smith
 SELECT idProd
 FROM ((Boutique INNER JOIN PrixProduit ON Boutique.idB = PrixProduit.idBoutique)
 INNER JOIN Produit ON PrixProduit.idProduit = Produit.idProd)
@@ -113,10 +114,13 @@ INNER JOIN Personne ON Boutique.idGerant = Personne.idP
 WHERE prenom = "John"
 AND nom = "SMITH";
 
+-- Etape 2 : Sélectionner par boutique, tous les idProduit
 SELECT idBoutique, idProduit
 FROM PrixProduit
 GROUP BY idBoutique, idProduit;
 
+-- Etape 3, combo des deux premières étapes
+-- Donc, sélectionner les boutiques qui ont un idProduit au moins qui est dans (IN) la liste des idProduit de la boutique de John Smith
 SELECT idBoutique, idProduit
 FROM PrixProduit
 GROUP BY idBoutique, idProduit
