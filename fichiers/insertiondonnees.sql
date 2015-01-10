@@ -6,7 +6,7 @@ INSERT INTO Personne(nom, prenom, mail, login, motDePasse) VALUES("SMITH", "John
 -- Insertion de tuples dans la table Boutique
 INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES("YiruMax", "maxime.blaise@yirumax.com", 28, "Aristide Briand", "Laxou", 54520, 1);
 INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES("TotoBoutique", "antoine.nosal@totoboutique.com", 50, "Aristide Briand", "Nancy", 54000, 2);
-INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES("Chez Lulu", "chezlulu@chezlulu.com", 4012, "rue Lulu", "LuluLand", 55555, 1);
+INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES("Chez Lulu", "chezlulu@chezlulu.com", 4012, "rue Lulu", "LuluLand", 55555, 3);
 
 -- Insertion de tuples dans la table Marque
 INSERT INTO Marque(nomMarque) VALUES("Adidas");

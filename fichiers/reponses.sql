@@ -107,9 +107,22 @@ HAVING reduction = MAX(reduction);
 -- un des articles vendus dans l'une des
 -- boutiques du gérant : John Smith
 SELECT idProd
-FROM Produit
-NATURAL INNER JOIN PrixProduit
-NATURAL INNER JOIN Boutique
-NATURAL INNER JOIN Personne
+FROM ((Boutique INNER JOIN PrixProduit ON Boutique.idB = PrixProduit.idBoutique)
+INNER JOIN Produit ON PrixProduit.idProduit = Produit.idProd)
+INNER JOIN Personne ON Boutique.idGerant = Personne.idP
 WHERE prenom = "John"
-AND nom = "Smith"
+AND nom = "SMITH";
+
+SELECT idBoutique, idProduit
+FROM PrixProduit
+GROUP BY idBoutique, idProduit;
+
+SELECT idBoutique, idProduit
+FROM PrixProduit
+GROUP BY idBoutique, idProduit
+HAVING idProduit IN ( SELECT idProd
+FROM ((Boutique INNER JOIN PrixProduit ON Boutique.idB = PrixProduit.idBoutique)
+INNER JOIN Produit ON PrixProduit.idProduit = Produit.idProd)
+INNER JOIN Personne ON Boutique.idGerant = Personne.idP
+WHERE prenom = "John"
+AND nom = "SMITH" );
