@@ -9,9 +9,21 @@ INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES
 INSERT INTO Boutique(nomBoutique, mail, numero, rue, ville, CP, idGerant) VALUES("Chez Lulu", "chezlulu@chezlulu.com", 4012, "rue Lulu", "LuluLand", 55555, 3);
 
 -- Insertion de tuples dans la table Marque
-INSERT INTO Marque(nomMarque) VALUES("Adidas");
-INSERT INTO Marque(nomMarque) VALUES("Nike");
-INSERT INTO Marque(nomMarque) VALUES("Nokia");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("ipsum");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("fringilla");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("Sed");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("sociis");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("euismod");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("egestas.");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("nec");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("eu");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("sociis");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("et");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("elit.");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("Nulla");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("nec");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("ornare,");
+INSERT INTO `Marque` (`nomMarque`) VALUES ("sit");
 
 -- Insertion de tuples dans la table Produit
 INSERT INTO Produit(libelle, idMarque, description) VALUES("Veste", 1, "");
@@ -21,10 +33,12 @@ INSERT INTO Produit(libelle, idMarque, description) VALUES("Chaussure sport", 2,
 INSERT INTO Produit(libelle, idMarque, description) VALUES("Veste", 3, "");
 INSERT INTO Produit(libelle, idMarque, description) VALUES("Chaussure", 3, "");
 -- Insertion d'un produit dont l'idMarque est null, pour la question 7
-INSERT INTO Produit(libelle, idMarque, description) VALUES("", null, "");
+INSERT INTO Produit(libelle, idMarque, description) VALUES("Toto", null, "");
 
 -- Insertion de tuples dans la table PrixProduit
+INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(1, 3, 50);
 INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(2, 3, 50);
 INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(1, 2, 50);
+INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(2, 2, 350);
 INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(4, 3, 80);
 INSERT INTO PrixProduit(idProduit, idBoutique, prix) VALUES(4, 1, 70);
