@@ -101,3 +101,15 @@ SELECT *
 FROM Boutique INNER JOIN Promotion ON Boutique.idB = Promotion.idBoutique 
 GROUP BY idB 
 HAVING reduction = MAX(reduction);
+
+-- Question 18
+-- Afficher les boutiques vendant au moins 
+-- un des articles vendus dans l'une des
+-- boutiques du gérant : John Smith
+SELECT idProd
+FROM Produit
+NATURAL INNER JOIN PrixProduit
+NATURAL INNER JOIN Boutique
+NATURAL INNER JOIN Personne
+WHERE prenom = "John"
+AND nom = "Smith"
